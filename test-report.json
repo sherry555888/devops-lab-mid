@@ -1,0 +1,30 @@
+{
+  "repository": "Local Repo",
+  "branch": "main",
+  "commitSHA": "Local Commit",
+  "pipelineRunId": "1",
+  "timestamp": "2026-11-07T15:58:39.069Z",
+  "tests": [
+    {
+      "name": "Complete details and valid submission URL",
+      "result": "FAILED",
+      "failureMessage": "Expected submission to be valid"
+    },
+    {
+      "name": "Missing registration number",
+      "result": "PASSED",
+      "failureMessage": null
+    },
+    {
+      "name": "Invalid submission URL",
+      "result": "FAILED",
+      "failureMessage": "Expected submission to be rejected due to invalid URL"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 1,
+    "failed": 2,
+    "overallStatus": "FAILED"
+  }
+}

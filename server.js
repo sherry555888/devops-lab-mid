@@ -19,7 +19,7 @@ function validateSubmission(data) {
         '(\\?[;&a-z\\d%_.~+=-]*)?'+ 
         '(\\#[-a-z\\d_]*)?$','i');
     
-    if (urlPattern.test(url)) {
+    if (!urlPattern.test(url)) {
         return { valid: false, message: 'Invalid submission URL format.' };
     }
     return { valid: true };
