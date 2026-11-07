@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Submission Portal</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; max-width: 600px; }
+        input, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+        .error { color: red; } .success { color: green; }
+    </style>
+</head>
+<body>
+    <h2>Assignment Portal</h2>
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="regNo" placeholder="Registration Number">
+    <input type="text" id="title" placeholder="Assignment Title">
+    <input type="text" id="url" placeholder="Submission URL (http://...)">
+    <button onclick="submitData()">Submit</button>
+    <div id="msg"></div>
+    <h3>Submissions List</h3>
+    <ul id="list"></ul>
+
+    <script>
+        async function submitData() {
+            const data = {
+                name: document.getElementById('name').value,
+                regNo: document.getElementById('regNo').value,
+                title: document.getElementById('title').value,
+                url: document.getElementById('url').value
+            };
+            const res = await fetch('/api/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            const result = await res.json();
+            const msgDiv = document.getElementById('msg');
+            if (res.ok) {
+                msgDiv.className = 'success';
+                msgDiv.innerText = 'Submission Saved Successfully!';
+                loadList();
+            } else {
+                msgDiv.className = 'error';
+                msgDiv.innerText = result.error;
+            }
+        }
+
+        async function loadList() {
+            const res = await fetch('/api/submissions');
+            const data = await res.json();
+            const list = document.getElementById('list');
+            list.innerHTML = data.map(s => `<li><b>${s.name} (${s.regNo}):</b> ${s.title} - <a href="${s.url}">${s.url}</a></li>`).join('');
+        }
+        loadList();
+    </script>
+</body>
+</html>
