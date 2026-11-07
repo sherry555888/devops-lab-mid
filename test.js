@@ -49,9 +49,17 @@ const report = {
 axios.post('http://localhost:4000/report', report)
     .then(() => {
         console.log("Report payload sent to localhost receiver successfully.");
-        if (failed > 0) process.exit(1);
+        if (failed > 0) {
+            process.exit(1);
+        } else {
+            process.exit(0);
+        }
     })
     .catch(err => {
         console.error("Failed to send report to localhost receiver:", err.message);
-        if (failed > 0) process.exit(1);
+        if (failed > 0) {
+            process.exit(1);
+        } else {
+            process.exit(0);
+        }
     });
