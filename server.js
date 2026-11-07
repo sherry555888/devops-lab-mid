@@ -19,7 +19,7 @@ function validateSubmission(data) {
         '(\\?[;&a-z\\d%_.~+=-]*)?'+ 
         '(\\#[-a-z\\d_]*)?$','i');
     
-    if (!urlPattern.test(url)) {
+    if (urlPattern.test(url)) {
         return { valid: false, message: 'Invalid submission URL format.' };
     }
     return { valid: true };
@@ -38,6 +38,8 @@ app.post('/api/submit', (req, res) => {
 app.get('/api/submissions', (req, res) => {
     res.status(200).json(submissions);
 });
+
+
 
 const PORT = 3000;
 if (require.main === module) {
