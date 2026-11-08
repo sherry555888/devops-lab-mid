@@ -6,32 +6,53 @@ app.use(express.static('public'));
 
 let submissions = [];
 
-// Validation Helper Function
+// Dynamic & Strict Validation Helper Function
 function validateSubmission(data) {
     if (!data) {
         return { valid: false, message: 'No payload provided.' };
     }
 
-    const { name, regNo, title, url } = data;
+    let { name, regNo, title, url } = data;
 
-    // Check required fields (Name, Registration Number, Title, URL)
-    if (!name || !regNo || !title || !url) {
-        return { valid: false, message: 'Missing required fields (Registration Number required).' };
+    // 1. Missing Field Checks
+    if (!name || name.trim() === '') {
+        return { valid: false, message: 'Missing required field: Name is required.' };
+    }
+    if (!regNo || regNo.trim() === '') {
+        return { valid: false, message: 'Missing required field: Registration Number is required.' };
+    }
+    if (!title || title.trim() === '') {
+        return { valid: false, message: 'Missing required field: Assignment Title is required.' };
+    }
+    if (!url || url.trim() === '') {
+        return { valid: false, message: 'Missing required field: Submission URL is required.' };
     }
 
-    // Standard URL Validation Pattern
-    const urlPattern = new RegExp('^(https?:\\/\\/)?'+ 
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ 
-        '((\\d{1,3}\\.){3}\\d{1,3}))'+ 
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ 
-        '(\\?[;&a-z\\d%_.~+=-]*)?'+ 
-        '(\\#[-a-z\\d_]*)?$','i');
-    
-    if (urlPattern.test(url)) {
+    regNo = regNo.trim();
+    url = url.trim();
+
+    // 2. Strict Registration Number Format Check (e.g., SP23-BCS-064, FA20-BCS-001)
+    const regNoPattern = /^[A-Z]{2}\d{2}-[A-Z]{3}-\d{3}$/i;
+    if (!regNoPattern.test(regNo)) {
+        return { valid: false, message: 'Invalid Registration Number format. Expected format: SP23-BCS-064' };
+    }
+
+    // Auto-prefix http:// if missing protocol
+    if (!/^https?:\/\//i.test(url)) {
+        url = 'https://' + url;
+    }
+
+    // 3. Native URL Parsing Validation
+    try {
+        const parsedUrl = new URL(url);
+        if (!parsedUrl.protocol !== 'http:' && parsedUrl.protocol !== 'https:') {
+            return { valid: false, message: 'Invalid submission URL format.' };
+        }
+    } catch (err) {
         return { valid: false, message: 'Invalid submission URL format.' };
     }
 
-    return { valid: true, message: 'Submission is valid.' };
+    return { valid: true, message: 'Submission is valid.', formattedUrl: url, formattedRegNo: regNo.toUpperCase() };
 }
 
 // API Routes
@@ -40,7 +61,15 @@ app.post('/api/submit', (req, res) => {
     if (!validation.valid) {
         return res.status(400).json({ error: validation.message });
     }
-    submissions.push(req.body);
+
+    const newSubmission = {
+        name: req.body.name.trim(),
+        regNo: validation.formattedRegNo,
+        title: req.body.title.trim(),
+        url: validation.formattedUrl
+    };
+
+    submissions.push(newSubmission);
     return res.status(200).json({ message: 'Saved successfully', submissions });
 });
 
@@ -48,7 +77,7 @@ app.get('/api/submissions', (req, res) => {
     res.status(200).json(submissions);
 });
 
-// Server Execution (Only runs when executed directly)
+// Server Execution
 const PORT = 3000;
 if (require.main === module) {
     app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
