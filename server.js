@@ -39,7 +39,7 @@ function validateSubmission(data) {
         '(\\#[-a-z\\d_]*)?$','i');
 
     // 👈 PASSING CONDITION: '!' operator laga hua hai
-    if (urlPattern.test(url)) {
+    if (!urlPattern.test(url)) {
         return { valid: false, message: 'Invalid submission URL.' };
     }
 

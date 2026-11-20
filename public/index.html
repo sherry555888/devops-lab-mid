@@ -2,56 +2,239 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Submission Portal</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 30px; max-width: 600px; }
-        input, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
-        .error { color: red; } .success { color: green; }
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* Top Portal Header */
+        .portal-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            padding: 22px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .portal-header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Form Container Card */
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #2a5298;
+        }
+
+        button {
+            width: 100%;
+            background-color: #2a5298;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e3c72;
+        }
+
+        /* Dynamic Alert Messages */
+        #alert-box {
+            margin-top: 15px;
+            padding: 12px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            display: none;
+            font-weight: 500;
+        }
+
+        .error-msg {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef9a9a;
+        }
+
+        .success-msg {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+        }
+
+        /* Submissions List Section */
+        .submissions-section {
+            margin-top: 35px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+
+        .submissions-section h3 {
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+
+        .submission-item {
+            background: #f8f9fa;
+            border-left: 4px solid #2a5298;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
-    <h2>Assignment Portal</h2>
-    <input type="text" id="name" placeholder="Student Name">
-    <input type="text" id="regNo" placeholder="Registration Number">
-    <input type="text" id="title" placeholder="Assignment Title">
-    <input type="text" id="url" placeholder="Submission URL (http://...)">
-    <button onclick="submitData()">Submit</button>
-    <div id="msg"></div>
-    <h3>Submissions List</h3>
-    <ul id="list"></ul>
+
+    <!-- Header Bar -->
+    <header class="portal-header">
+        <h1>🎓 Student Assignment Portal</h1>
+    </header>
+
+    <!-- Main Container Card -->
+    <div class="container">
+        <form id="submissionForm">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+            </div>
+
+            <div class="form-group">
+                <label for="regNo">Registration Number</label>
+                <input type="text" id="regNo" placeholder="e.g. SP23-BCS-064">
+            </div>
+
+            <div class="form-group">
+                <label for="title">Assignment Title</label>
+                <input type="text" id="title" placeholder="e.g. Lab Assignment 01">
+            </div>
+
+            <div class="form-group">
+                <label for="url">Submission URL</label>
+                <input type="text" id="url" placeholder="https://github.com/your-repo/actions">
+            </div>
+
+            <button type="submit">Submit Assignment</button>
+        </form>
+
+        <div id="alert-box"></div>
+
+        <div class="submissions-section">
+            <h3>Submissions List</h3>
+            <div id="submissionsList"></div>
+        </div>
+    </div>
 
     <script>
-        async function submitData() {
-            const data = {
+        const form = document.getElementById('submissionForm');
+        const alertBox = document.getElementById('alert-box');
+        const submissionsList = document.getElementById('submissionsList');
+
+        fetchSubmissions();
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const payload = {
                 name: document.getElementById('name').value,
                 regNo: document.getElementById('regNo').value,
                 title: document.getElementById('title').value,
                 url: document.getElementById('url').value
             };
-            const res = await fetch('/api/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-            const result = await res.json();
-            const msgDiv = document.getElementById('msg');
-            if (res.ok) {
-                msgDiv.className = 'success';
-                msgDiv.innerText = 'Submission Saved Successfully!';
-                loadList();
-            } else {
-                msgDiv.className = 'error';
-                msgDiv.innerText = result.error;
+
+            try {
+                const res = await fetch('/api/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await res.json();
+
+                if (!res.ok) {
+                    showAlert(data.error || 'Validation Error', 'error-msg');
+                } else {
+                    showAlert('Assignment Submitted Successfully!', 'success-msg');
+                    form.reset();
+                    renderSubmissions(data.submissions);
+                }
+            } catch (err) {
+                showAlert('Failed to connect to server.', 'error-msg');
+            }
+        });
+
+        async function fetchSubmissions() {
+            try {
+                const res = await fetch('/api/submissions');
+                const data = await res.json();
+                renderSubmissions(data);
+            } catch (err) {
+                console.error(err);
             }
         }
 
-        async function loadList() {
-            const res = await fetch('/api/submissions');
-            const data = await res.json();
-            const list = document.getElementById('list');
-            list.innerHTML = data.map(s => `<li><b>${s.name} (${s.regNo}):</b> ${s.title} - <a href="${s.url}">${s.url}</a></li>`).join('');
+        function renderSubmissions(list) {
+            if (!list || list.length === 0) {
+                submissionsList.innerHTML = '<p style="color:#777; font-size:0.9rem;">No submissions yet.</p>';
+                return;
+            }
+            submissionsList.innerHTML = list.map(item => `
+                <div class="submission-item">
+                    <strong>${item.name}</strong> (${item.regNo}) - <em>${item.title}</em><br/>
+                    <a href="${item.url}" target="_blank" style="color:#2a5298; font-size:0.85rem;">${item.url}</a>
+                </div>
+            `).join('');
         }
-        loadList();
+
+        function showAlert(msg, type) {
+            alertBox.textContent = msg;
+            alertBox.className = type;
+            alertBox.style.display = 'block';
+        }
     </script>
 </body>
 </html>

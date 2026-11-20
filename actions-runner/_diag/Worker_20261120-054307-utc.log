@@ -1,0 +1,3352 @@
+[2026-11-20 05:43:07Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-11-20 05:43:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:07Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials'
+[2026-11-20 05:43:07Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:07Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:07Z INFO HostContext] Well known config file 'Runner': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.runner'
+[2026-11-20 05:43:07Z INFO Worker] Version: 2.338.2
+[2026-11-20 05:43:07Z INFO Worker] Commit: d1eb12d4b115c301201de27d667284e1a80f2ab5
+[2026-11-20 05:43:07Z INFO Worker] Culture: en-US
+[2026-11-20 05:43:07Z INFO Worker] UI Culture: en-US
+[2026-11-20 05:43:07Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-11-20 05:43:07Z INFO ProcessChannel] Receiving message of length 22121, with hash '8759cea7a60f88e2b2fe07940866bbff3f05246dc16bf707be07e17f4088beb7'
+[2026-11-20 05:43:07Z INFO Worker] Message received.
+[2026-11-20 05:43:08Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/ci.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 12,
+        "col": 13,
+        "lit": "Checkout Repository"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "338129c1-5525-490f-8638-b26071fea774",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 13,
+        "lit": "Run Automated Tests"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 16,
+              "col": 12,
+              "lit": "npm test"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dffbc497-5b04-4b2f-b5fa-afa1b2f74705",
+      "name": "__run"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions.runner.requirenode24": {
+      "value": "true"
+    },
+    "actions.runner.usenode24bydefault": {
+      "value": "true"
+    },
+    "actions.runner.warnonnode20": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_batch_action_resolution": {
+      "value": "false"
+    },
+    "actions_cache_mode": {
+      "value": "write"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_runner_allow_artifacts_file": {
+      "value": "true"
+    },
+    "actions_runner_compare_workflow_parser": {
+      "value": "false"
+    },
+    "actions_runner_deprecate_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_emit_composite_markers": {
+      "value": "true"
+    },
+    "actions_runner_kill_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_node20_removal_date": {
+      "value": "September 23rd, 2026"
+    },
+    "actions_runner_node24_default_date": {
+      "value": "June 16th, 2026"
+    },
+    "actions_self_repository": {
+      "value": "true"
+    },
+    "actions_service_container_command": {
+      "value": "true"
+    },
+    "actions_set_orchestration_id_env_for_actions": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_snapshot_preflight_hosted_runner_check": {
+      "value": "false"
+    },
+    "actions_snapshot_preflight_image_gen_pool_check": {
+      "value": "false"
+    },
+    "actions_use_bearer_token_for_codeload": {
+      "value": "false"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "test"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "1e4f8f3f-d254-884e-afdb-f456122a9dfa.test.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "test"
+    },
+    "system.runner.brokerwebsocketprobeurl": {
+      "value": "wss://broker.actions.githubusercontent.com/_ws/ping.sock"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "1e4f8f3f-d254-884e-afdb-f456122a9dfa",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "1e4f8f3f-d254-884e-afdb-f456122a9dfa",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "ed9d0aca-3e16-5c67-9074-959514858b98",
+  "jobDisplayName": "test",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/qAXNUMwtqUPPU9MCrFumeaTgX27Mh6ilj4Pb34Ii11FA4Qx3Dz/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/qAXNUMwtqUPPU9MCrFumeaTgX27Mh6ilj4Pb34Ii11FA4Qx3Dz/",
+          "GenerateIdTokenUrl": "",
+          "ConnectivityChecks": "[\"https://broker.actions.githubusercontent.com/health\",\"https://token.actions.githubusercontent.com/ready\",\"https://run.actions.githubusercontent.com/health\"]",
+          "ConnectivityAndDNSChecks": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-1-azure-eastus.actions.githubusercontent.com/258/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+        },
+        {
+          "k": "repository",
+          "v": "sherry555888/devops-lab-mid"
+        },
+        {
+          "k": "repository_owner",
+          "v": "sherry555888"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "277854300"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/sherry555888/devops-lab-mid.git"
+        },
+        {
+          "k": "run_id",
+          "v": "44682859398"
+        },
+        {
+          "k": "run_number",
+          "v": "14"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "277854300"
+        },
+        {
+          "k": "actor",
+          "v": "sherry555888"
+        },
+        {
+          "k": "workflow",
+          "v": "CI Pipeline"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "587b8c9340051b6e8130bcad997b547747dfda86"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "sherry456@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "sherry"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "sherry456@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "sherry"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Test FAILED status email trigger"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2026-11-20T10:42:46+05:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "f91a177dfe5d5329061fd872ade693ee417faeed"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/sherry555888/devops-lab-mid/commit/ec04baa09d598a5b6d3f25630c11046cff027d63"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/sherry555888/devops-lab-mid/compare/587b8c934005...ec04baa09d59"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "sherry456@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "sherry"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "sherry456@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "sherry"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Test FAILED status email trigger"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2026-11-20T10:42:46+05:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "f91a177dfe5d5329061fd872ade693ee417faeed"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/sherry555888/devops-lab-mid/commit/ec04baa09d598a5b6d3f25630c11046cff027d63"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "msheharyar064@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "sherry555888"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/sherry555888/devops-lab-mid.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1794061335.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "sherry555888/devops-lab-mid"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/sherry555888/devops-lab-mid.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pull_requests",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/sherry555888/devops-lab-mid"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1449427191.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "devops-lab-mid"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOVmSA9w"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/277854300?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "msheharyar064@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/sherry555888/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/sherry555888/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/sherry555888/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/sherry555888/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/sherry555888"
+                          },
+                          {
+                            "k": "id",
+                            "v": 277854300.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "sherry555888"
+                          },
+                          {
+                            "k": "name",
+                            "v": "sherry555888"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOEI-4XA"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/sherry555888/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/sherry555888/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/sherry555888/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/sherry555888/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/sherry555888/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/sherry555888"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pull_request_creation_policy",
+                      "v": "all"
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1795153375.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 186108.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:sherry555888/devops-lab-mid.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/sherry555888/devops-lab-mid"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2026-11-08T22:47:36Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/sherry555888/devops-lab-mid"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/277854300?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/sherry555888/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/sherry555888/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/sherry555888/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/sherry555888/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/sherry555888"
+                    },
+                    {
+                      "k": "id",
+                      "v": 277854300.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "sherry555888"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOEI-4XA"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/sherry555888/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/sherry555888/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/sherry555888/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/sherry555888/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/sherry555888/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/sherry555888"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "sherry555888/devops-lab-mid/.github/workflows/ci.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+        },
+        {
+          "k": "repository_id",
+          "v": "1449427191"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "sherry555888"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 136110148873.0
+        },
+        {
+          "k": "workflow_ref",
+          "v": "sherry555888/devops-lab-mid/.github/workflows/ci.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "ec04baa09d598a5b6d3f25630c11046cff027d63"
+        },
+        {
+          "k": "workflow_repository",
+          "v": "sherry555888/devops-lab-mid"
+        },
+        {
+          "k": "workflow_file_path",
+          "v": ".github/workflows/ci.yml"
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOEI-4XA"
+}
+[2026-11-20 05:43:08Z INFO JobRunner] Job ID ed9d0aca-3e16-5c67-9074-959514858b98
+[2026-11-20 05:43:08Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin\Runner.Worker.dll
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] binPath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] RootFolder: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known config file 'Runner': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.runner'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] ConfigFilePath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.runner
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.runner_migrated'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.runner_migrated
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] CredFilePath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials_migrated'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials_migrated
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known config file 'Service': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.service'
+[2026-11-20 05:43:08Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.service
+[2026-11-20 05:43:08Z INFO ConfigurationStore] Read setting file: 402 chars
+[2026-11-20 05:43:08Z INFO JobRunner] Initializing launch client
+[2026-11-20 05:43:08Z INFO JobServerQueue] Initializing results client
+[2026-11-20 05:43:08Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-11-20 05:43:08Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2026-11-20 05:43:08Z INFO JobServerQueue] Start process web console line queue.
+[2026-11-20 05:43:08Z INFO JobServerQueue] Start process file upload queue.
+[2026-11-20 05:43:08Z INFO JobServerQueue] Start results file upload queue.
+[2026-11-20 05:43:08Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-11-20 05:43:08Z INFO JobServerQueue] Start process timeline update queue.
+[2026-11-20 05:43:08Z INFO ExecutionContext] Initializing Job context
+[2026-11-20 05:43:08Z INFO ExecutionContext] Initialize GitHub context
+[2026-11-20 05:43:08Z INFO ExecutionContext] Initialize Env context
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:08Z INFO JobRunner] Starting the job execution context.
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:08Z INFO JobRunner] Validating directory permissions for: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Tools': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_tool'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:09Z INFO JobRunner] Getting job extension.
+[2026-11-20 05:43:09Z INFO JobRunner] Initialize job. Getting all job steps.
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.credentials'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\.setup_info'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:09Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_PipelineMapping\sherry555888/devops-lab-mid\PipelineFolder.json
+[2026-11-20 05:43:09Z INFO PipelineDirectoryManager] Updating job run properties.
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:09Z INFO JobExtension] Downloading actions
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:09Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:09Z INFO Worker] Listening for cancel message from the channel.
+[2026-11-20 05:43:09Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:11Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:11Z INFO ActionManager] Save archive 'https://codeload.github.com/actions/checkout/zip/a37ce9120846195fa4ece8f58b268e6043cb2f26' into C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\_temp_8ecae531-0e3e-49b4-b7ec-113e413b5424\2f07f6c1-f911-41ef-8d0a-ca1663344160.zip.
+[2026-11-20 05:43:11Z INFO ActionManager] Using Basic token for action archive download.
+[2026-11-20 05:43:11Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2026-11-20 05:43:13Z INFO ActionManager] Request URL: https://codeload.github.com/actions/checkout/zip/a37ce9120846195fa4ece8f58b268e6043cb2f26 X-GitHub-Request-Id: F17F:1FB0AB:1DC07:85D19:6AFFDDEF Http Status: OK
+[2026-11-20 05:43:15Z INFO ResultServer] Successfully started websocket client.
+[2026-11-20 05:43:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f36c35b4-74f3-4346-9408-42c76b446238', success rate: 1/1.
+[2026-11-20 05:43:15Z INFO ActionManager] Finished getting action repository.
+[2026-11-20 05:43:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f36c35b4-74f3-4346-9408-42c76b446238', success rate: 1/1.
+[2026-11-20 05:43:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:15Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:15Z INFO ActionManifestManagerLegacy] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-11-20 05:43:16Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2026-11-20 05:43:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:16Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:17Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 89,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-20 05:43:17Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:17Z INFO ActionManager] Load action that reference repository from 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\actions\checkout\v3'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:17Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 89,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-20 05:43:17Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-11-20 05:43:17Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-11-20 05:43:17Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-11-20 05:43:17Z INFO JobExtension] Adding .
+[2026-11-20 05:43:17Z INFO JobExtension] Adding .
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:17Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'f36c35b4-74f3-4346-9408-42c76b446238', success rate: 1/1.
+[2026-11-20 05:43:17Z INFO JobExtension] Total accessible running process: 257.
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:17Z INFO JobExtension] Start checking server connectivity.
+[2026-11-20 05:43:17Z INFO JobExtension] Check server connectivity for https://broker.actions.githubusercontent.com/health.
+[2026-11-20 05:43:17Z INFO JobExtension] Check server connectivity for https://token.actions.githubusercontent.com/ready.
+[2026-11-20 05:43:17Z INFO JobExtension] Check server connectivity for https://run.actions.githubusercontent.com/health.
+[2026-11-20 05:43:17Z INFO JobExtension] Start checking service connectivity in background.
+[2026-11-20 05:43:17Z INFO JobExtension] Start checking runner websocket connectivity in background.
+[2026-11-20 05:43:17Z INFO BrokerServer] Attempting to start runner websocket client.
+[2026-11-20 05:43:17Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "f36c35b4-74f3-4346-9408-42c76b446238",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 9,
+  "startTime": "2026-11-20T05:43:09.1132713Z",
+  "finishTime": "2026-11-20T05:43:17.4534141Z"
+}.
+[2026-11-20 05:43:17Z INFO JobRunner] Total job steps: 2.
+[2026-11-20 05:43:17Z INFO JobRunner] Run all job steps.
+[2026-11-20 05:43:17Z INFO DapDebugger] DapDebugger initialized
+[2026-11-20 05:43:17Z INFO StepsRunner] Processing step: DisplayName='Checkout Repository'
+[2026-11-20 05:43:17Z INFO StepsRunner] Evaluating: success()
+[2026-11-20 05:43:17Z INFO StepsRunner] Result: true
+[2026-11-20 05:43:17Z INFO StepsRunner] Starting the step.
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:17Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:17Z INFO StepsRunner] Which2: 'chcp'
+[2026-11-20 05:43:17Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:17Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper] Process started with process id 8368, waiting for process exit.
+[2026-11-20 05:43:18Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-20 05:43:18Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_f36c35b4-74f3-4346-9408-42c76b446238.1
+[2026-11-20 05:43:18Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper] Finished process 8368 with exit code 0, and elapsed time 00:00:00.5693763.
+[2026-11-20 05:43:18Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:18Z INFO ActionManager] Load action that reference repository from 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\actions\checkout\v3'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 89,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-20 05:43:18Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-11-20 05:43:18Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-11-20 05:43:18Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-11-20 05:43:18Z INFO ExecutionContext] Reserve record order 4 to 6 for post job actions.
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:18Z INFO ExecutionContext] Write event payload to C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:18Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateArtifactsFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ArtifactsListFileCommand, Runner.Worker
+[2026-11-20 05:43:18Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_list_8853ae45-ac7e-4948-853d-66bb1fccfe08'
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "sherry555888/devops-lab-mid"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'ref': default value evaluate result: ""
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'ssh-key': default value evaluate result: ""
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'ssh-known-hosts': default value evaluate result: ""
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'path': default value evaluate result: ""
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'github-server-url': default value evaluate result: ""
+[2026-11-20 05:43:18Z INFO ActionManifestManagerLegacy] Input 'allow-unsafe-pr-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:18Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-20 05:43:18Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:18Z INFO HostContext] Well known directory 'Externals': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\externals'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\externals\node24\bin\node.exe'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\devops-lab-mid\devops-lab-mid'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:18Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:19Z ERR  GitHubActionsService] GET request to wss://broker.actions.githubusercontent.com/_ws/ping.sock failed. HTTP Status: SwitchingProtocols
+[2026-11-20 05:43:19Z INFO BrokerServer] Successfully started runner websocket client.
+[2026-11-20 05:43:21Z INFO ProcessInvokerWrapper] Process started with process id 5632, waiting for process exit.
+[2026-11-20 05:43:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:22Z INFO AddMaskCommandExtension] Add new secret mask with length of 524
+[2026-11-20 05:43:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:22Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:27Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:29Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:31Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Finished process 5632 with exit code 0, and elapsed time 00:00:13.5372019.
+[2026-11-20 05:43:32Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\step_summary_8853ae45-ac7e-4948-853d-66bb1fccfe08) is empty; skipping attachment upload
+[2026-11-20 05:43:32Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_8853ae45-ac7e-4948-853d-66bb1fccfe08'
+[2026-11-20 05:43:32Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-20 05:43:32Z INFO StepsRunner] Step result: 
+[2026-11-20 05:43:32Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node24",
+  "stage": "Main",
+  "stepId": "338129c1-5525-490f-8638-b26071fea774",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 15,
+  "startTime": "2026-11-20T05:43:17.5778298Z",
+  "finishTime": "2026-11-20T05:43:32.0755154Z"
+}.
+[2026-11-20 05:43:32Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-20 05:43:32Z INFO StepsRunner] Current state: job state = ''
+[2026-11-20 05:43:32Z INFO StepsRunner] Processing step: DisplayName='Run Automated Tests'
+[2026-11-20 05:43:32Z INFO StepsRunner] Evaluating: success()
+[2026-11-20 05:43:32Z INFO StepsRunner] Result: true
+[2026-11-20 05:43:32Z INFO StepsRunner] Starting the step.
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:32Z INFO StepsRunner] Which2: 'chcp'
+[2026-11-20 05:43:32Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Process started with process id 10548, waiting for process exit.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Finished process 10548 with exit code 0, and elapsed time 00:00:00.0212994.
+[2026-11-20 05:43:32Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:32Z INFO ExecutionContext] Write event payload to C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:32Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-20 05:43:32Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_list_a6cddfd2-9b26-4b82-81cb-e2a0d2d22968'
+[2026-11-20 05:43:32Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-20 05:43:32Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-20 05:43:32Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-11-20 05:43:32Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-11-20 05:43:32Z INFO ScriptHandler] Defaulting to powershell
+[2026-11-20 05:43:32Z INFO ScriptHandler] Which2: 'powershell'
+[2026-11-20 05:43:32Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:32Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:32Z INFO ScriptHandler] Which2: 'pwsh'
+[2026-11-20 05:43:32Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2026-11-20 05:43:32Z INFO ScriptHandler] Defaulting to powershell
+[2026-11-20 05:43:32Z INFO ScriptHandler] Which2: 'powershell'
+[2026-11-20 05:43:32Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\0ae29a92-ae94-44da-9dc3-531130357d1a.ps1'"'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\devops-lab-mid\devops-lab-mid'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record '338129c1-5525-490f-8638-b26071fea774', success rate: 1/1.
+[2026-11-20 05:43:32Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dffbc497-5b04-4b2f-b5fa-afa1b2f74705', success rate: 1/1.
+[2026-11-20 05:43:32Z INFO ProcessInvokerWrapper] Process started with process id 10520, waiting for process exit.
+[2026-11-20 05:43:32Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-20 05:43:34Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dffbc497-5b04-4b2f-b5fa-afa1b2f74705', success rate: 1/1.
+[2026-11-20 05:43:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:37Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dffbc497-5b04-4b2f-b5fa-afa1b2f74705', success rate: 1/1.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Finished process 10520 with exit code 1, and elapsed time 00:00:07.2159939.
+[2026-11-20 05:43:39Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\step_summary_a6cddfd2-9b26-4b82-81cb-e2a0d2d22968) is empty; skipping attachment upload
+[2026-11-20 05:43:39Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_a6cddfd2-9b26-4b82-81cb-e2a0d2d22968'
+[2026-11-20 05:43:39Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-20 05:43:39Z INFO StepsRunner] Step result: Failed
+[2026-11-20 05:43:39Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "dffbc497-5b04-4b2f-b5fa-afa1b2f74705",
+  "stepContextName": "__run",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 8,
+  "startTime": "2026-11-20T05:43:32.0807691Z",
+  "finishTime": "2026-11-20T05:43:39.4063209Z"
+}.
+[2026-11-20 05:43:39Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2026-11-20 05:43:39Z INFO StepsRunner] Current state: job state = 'Failed'
+[2026-11-20 05:43:39Z INFO StepsRunner] Processing step: DisplayName='Post Checkout Repository'
+[2026-11-20 05:43:39Z INFO StepsRunner] Evaluating: always()
+[2026-11-20 05:43:39Z INFO StepsRunner] Result: true
+[2026-11-20 05:43:39Z INFO StepsRunner] Starting the step.
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO StepsRunner] Which2: 'chcp'
+[2026-11-20 05:43:39Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Process started with process id 16196, waiting for process exit.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Finished process 16196 with exit code 0, and elapsed time 00:00:00.0193411.
+[2026-11-20 05:43:39Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:39Z INFO ActionManager] Load action that reference repository from 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\actions\checkout\v3'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions'
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 89,
+          "col": 3,
+          "lit": "allow-unsafe-pr-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2026-11-20 05:43:39Z INFO ActionManager] Action pre node.js file: N/A.
+[2026-11-20 05:43:39Z INFO ActionManager] Action node.js file: dist/index.js.
+[2026-11-20 05:43:39Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:39Z INFO ExecutionContext] Write event payload to C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_github_workflow\event.json
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Temp': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp'
+[2026-11-20 05:43:39Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2026-11-20 05:43:39Z INFO ArtifactsListFileCommand] Wrote $GITHUB_ARTIFACTS_LIST with 0 subject(s) to 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_list_0e570381-23d9-4350-8a73-c722888cd20a'
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "sherry555888/devops-lab-mid"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'ref': default value evaluate result: ""
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'ssh-key': default value evaluate result: ""
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'ssh-known-hosts': default value evaluate result: ""
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'path': default value evaluate result: ""
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'github-server-url': default value evaluate result: ""
+[2026-11-20 05:43:39Z INFO ActionManifestManagerLegacy] Input 'allow-unsafe-pr-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "false"
+}
+[2026-11-20 05:43:39Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command set-env
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command set-output
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command save-state
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command add-path
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command warning
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command error
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command notice
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command debug
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command group
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2026-11-20 05:43:39Z INFO ActionCommandManager] Register action command extension for command echo
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:39Z INFO HostContext] Well known directory 'Externals': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\externals'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Starting process:
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\externals\node24\bin\node.exe'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\devops-lab-mid\devops-lab-mid'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-11-20 05:43:39Z INFO ProcessInvokerWrapper] Process started with process id 2184, waiting for process exit.
+[2026-11-20 05:43:39Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2026-11-20 05:43:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'dffbc497-5b04-4b2f-b5fa-afa1b2f74705', success rate: 1/1.
+[2026-11-20 05:43:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:39Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2026-11-20 05:43:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:42Z INFO JobServerQueue] Try to append 1 batches web console lines for record '9b005871-fd2c-464e-9215-c0123b20fbc5', success rate: 1/1.
+[2026-11-20 05:43:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:44Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-11-20 05:43:44Z INFO ProcessInvokerWrapper] Finished process 2184 with exit code 0, and elapsed time 00:00:05.1390936.
+[2026-11-20 05:43:44Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\step_summary_0e570381-23d9-4350-8a73-c722888cd20a) is empty; skipping attachment upload
+[2026-11-20 05:43:44Z INFO CreateArtifactsFileCommand] Processing $GITHUB_ARTIFACTS file 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp\_runner_file_commands\artifacts_0e570381-23d9-4350-8a73-c722888cd20a'
+[2026-11-20 05:43:44Z INFO CreateArtifactsFileCommand] $GITHUB_ARTIFACTS file is empty; nothing to process.
+[2026-11-20 05:43:44Z INFO StepsRunner] Step result: 
+[2026-11-20 05:43:44Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node24",
+  "stage": "Post",
+  "stepId": "9b005871-fd2c-464e-9215-c0123b20fbc5",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 6,
+  "startTime": "2026-11-20T05:43:39.4208992Z",
+  "finishTime": "2026-11-20T05:43:44.6388752Z"
+}.
+[2026-11-20 05:43:44Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2026-11-20 05:43:44Z INFO StepsRunner] Current state: job state = 'Failed'
+[2026-11-20 05:43:44Z INFO JobRunner] Finalize job.
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:43:44Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:43:44Z INFO JobExtension] Initialize Env context
+[2026-11-20 05:43:44Z INFO JobExtension] Initialize steps context
+[2026-11-20 05:43:44Z INFO JobExtension] Total accessible running process: 252.
+[2026-11-20 05:43:44Z INFO JobExtension] Inspecting process environment variables. PID: 6244 (dllhost)
+[2026-11-20 05:43:44Z INFO JobExtension] Wait for all connectivity checks to finish.
+[2026-11-20 05:43:44Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://broker.actions.githubusercontent.com/health",
+  "endpointIPs": null,
+  "startTime": "2026-11-20T05:43:17.3797009Z",
+  "statusCode": "http_OK",
+  "requestId": "F180:56ECE:4BC0A94:4C45245:6AFFDDF5",
+  "httpRequestDurationInMs": 1630,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-11-20 05:43:44Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://token.actions.githubusercontent.com/ready",
+  "endpointIPs": null,
+  "startTime": "2026-11-20T05:43:17.3819199Z",
+  "statusCode": "http_NoContent",
+  "requestId": "F183:2FBD2F:2E6EAA9:33FE09F:6AFFDDF5",
+  "httpRequestDurationInMs": 4363,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-11-20 05:43:44Z INFO JobExtension] Connectivity check result: {
+  "endpointUrl": "https://run.actions.githubusercontent.com/health",
+  "endpointIPs": null,
+  "startTime": "2026-11-20T05:43:17.3823233Z",
+  "statusCode": "http_OK",
+  "requestId": "F181:2ADF30:63AC2A:654CA0:6AFFDDF5",
+  "httpRequestDurationInMs": 2438,
+  "dnsResolutionDurationInMs": 0,
+  "dnsError": null
+}
+[2026-11-20 05:43:44Z INFO JobExtension] Runner websocket probe result: {"connected":true,"connectCount":1,"lastCloseReason":"job_completed","totalDurationMs":27335,"errors":[]}
+[2026-11-20 05:43:44Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "44332ec4-f35c-454e-a6fa-7a5630ff41e2",
+  "result": "succeeded",
+  "errorMessages": [
+    "Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/"
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2026-11-20T05:43:44.6580065Z",
+  "finishTime": "2026-11-20T05:43:44.7581586Z"
+}.
+[2026-11-20 05:43:44Z INFO JobRunner] Job result after all job steps finish: Failed
+[2026-11-20 05:43:44Z INFO JobRunner] Completing the job execution context.
+[2026-11-20 05:43:44Z INFO JobRunner] Shutting down the job server queue.
+[2026-11-20 05:43:44Z INFO JobServerQueue] Try to append 1 batches web console lines for record '44332ec4-f35c-454e-a6fa-7a5630ff41e2', success rate: 1/1.
+[2026-11-20 05:43:44Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2026-11-20 05:45:00Z WARN GitHubActionsService] POST request to https://results-receiver.actions.githubusercontent.com/twirp/results.services.receiver.Receiver/CreateStepLogsMetadata timed out after 100 seconds.
+[2026-11-20 05:45:00Z INFO JobServerQueue] Catch exception during file upload to results, keep going since the process is best effort.
+[2026-11-20 05:45:00Z ERR  JobServerQueue] System.TimeoutException: The HTTP request timed out after 00:01:40.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at GitHub.Services.Common.RawHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.RawHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Sdk.WebApi.WebApi.RawHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.Results.Client.ResultsHttpClient.SendRequest[R](Uri uri, CancellationToken cancellationToken, R request, String timestamp)
+   at GitHub.Services.Results.Client.ResultsHttpClient.StepLogUploadCompleteAsync(String planId, String jobId, Guid stepId, Int64 lineCount, CancellationToken cancellationToken)
+   at GitHub.Services.Results.Client.ResultsHttpClient.UploadResultsStepLogAsync(String planId, String jobId, Guid stepId, String file, Boolean finalize, Boolean firstBlock, Int64 lineCount, CancellationToken cancellationToken)
+   at GitHub.Runner.Common.JobServerQueue.<UploadResultsStepLogFile>b__63_0(ResultsUploadFileInfo file)
+   at GitHub.Runner.Common.JobServerQueue.UploadResultsFile(ResultsUploadFileInfo file, ResultsFileUploadHandler uploadHandler)
+   at GitHub.Runner.Common.JobServerQueue.UploadResultsStepLogFile(ResultsUploadFileInfo file)
+   at GitHub.Runner.Common.JobServerQueue.ProcessResultsUploadQueueAsync(Boolean runOnce)
+[2026-11-20 05:45:00Z ERR  JobServerQueue] #####################################################
+[2026-11-20 05:45:00Z ERR  JobServerQueue] System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithNtAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean isProxyAuth, HttpConnection connection, HttpConnectionPool connectionPool, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.AuthenticationHelper.SendWithAuthAsync(HttpRequestMessage request, Uri authUri, Boolean async, ICredentials credentials, Boolean preAuthenticate, Boolean isProxyAuth, Boolean doRequestAuth, HttpConnectionPool pool, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at GitHub.Services.Common.RawHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+[2026-11-20 05:45:00Z ERR  JobServerQueue] #####################################################
+[2026-11-20 05:45:00Z ERR  JobServerQueue] System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](CancellationToken cancellationToken, Int32 estimatedSize)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+[2026-11-20 05:45:00Z ERR  JobServerQueue] #####################################################
+[2026-11-20 05:45:00Z ERR  JobServerQueue] System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+[2026-11-20 05:45:00Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 0/1.
+[2026-11-20 05:45:01Z INFO JobServerQueue] All queue process task stopped.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Web console line queue drained.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2026-11-20 05:45:01Z INFO JobServerQueue] File upload queue drained.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-11-20 05:45:01Z INFO JobServerQueue] Uploading 5 file(s) in one shot through results service.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-20 05:45:01Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_338129c1-5525-490f-8638-b26071fea774.1
+[2026-11-20 05:45:06Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-20 05:45:06Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_dffbc497-5b04-4b2f-b5fa-afa1b2f74705.1
+[2026-11-20 05:45:08Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-20 05:45:08Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_9b005871-fd2c-464e-9215-c0123b20fbc5.1
+[2026-11-20 05:45:10Z INFO JobServerQueue] Got a step log file to send to results service.
+[2026-11-20 05:45:10Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_44332ec4-f35c-454e-a6fa-7a5630ff41e2.1
+[2026-11-20 05:45:12Z INFO JobServerQueue] Got a job log file to send to results service.
+[2026-11-20 05:45:12Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\blocks\1e4f8f3f-d254-884e-afdb-f456122a9dfa_ed9d0aca-3e16-5c67-9074-959514858b98.1
+[2026-11-20 05:45:14Z INFO JobServerQueue] Tried to upload 5 file(s) to results, success rate: 5/5.
+[2026-11-20 05:45:14Z INFO JobServerQueue] Results upload queue drained.
+[2026-11-20 05:45:15Z INFO JobServerQueue] Timeline update queue drained.
+[2026-11-20 05:45:15Z INFO JobServerQueue] Disposing job server ...
+[2026-11-20 05:45:15Z INFO JobServerQueue] Disposing results server ...
+[2026-11-20 05:45:15Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2026-11-20 05:45:15Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_work\_temp
+[2026-11-20 05:45:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\bin'
+[2026-11-20 05:45:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner'
+[2026-11-20 05:45:15Z INFO HostContext] Well known directory 'Diag': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag'
+[2026-11-20 05:45:15Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\EHSAN LAPTOP\Desktop\devops-lab-mid\actions-runner\_diag\.telemetry'
+[2026-11-20 05:45:15Z INFO JobRunner] Raising job completed against run service
+[2026-11-20 05:45:16Z INFO Worker] Job completed.

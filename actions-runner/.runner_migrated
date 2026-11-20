@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "SHERYCRYPTO",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus14.actions.githubusercontent.com/qAXNUMwtqUPPU9MCrFumeaTgX27Mh6ilj4Pb34Ii11FA4Qx3Dz/",
+  "gitHubUrl": "https://github.com/sherry555888/devops-lab-mid",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

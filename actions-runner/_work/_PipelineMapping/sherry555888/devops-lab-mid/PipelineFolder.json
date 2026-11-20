@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "sherry555888/devops-lab-mid",
+  "pipelineDirectory": "devops-lab-mid",
+  "workspaceDirectory": "devops-lab-mid\\devops-lab-mid",
+  "repositories": {
+    "sherry555888/devops-lab-mid": {
+      "repositoryPath": "devops-lab-mid\\devops-lab-mid",
+      "lastRunOn": "11/07/2026 21:40:26 +05:00"
+    }
+  },
+  "lastRunOn": "11/20/2026 10:53:47 +05:00"
+}

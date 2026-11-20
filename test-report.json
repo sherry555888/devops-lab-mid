@@ -1,9 +1,9 @@
 {
-  "repository": "Local Repo",
+  "repository": "sherry555888/devops-lab-mid",
   "branch": "main",
-  "commitSHA": "Local Commit",
-  "pipelineRunId": "1",
-  "timestamp": "2026-11-07T15:58:39.069Z",
+  "commitSHA": "8061d6af7f7d87914379182c742e46e5bd78d83a",
+  "pipelineRunId": "44684038693",
+  "timestamp": "2026-11-20T05:54:14.744Z",
   "tests": [
     {
       "name": "Complete details and valid submission URL",
